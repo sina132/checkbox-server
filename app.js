@@ -32,6 +32,6 @@ app.get("/add/:id",async(req,res)=>{
 
 app.get('/get',async(req,res)=>{
     const data = await database.findOne({"id":1});
-    res.send(data.data);
+    res.send(String(data.data));
 })
 
